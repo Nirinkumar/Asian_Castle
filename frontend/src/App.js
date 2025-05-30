@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Rooms from "./pages/Rooms";
 import Login from "./pages/Login";
 import Contact from "./pages/Contact";
+import Footer from "./pages/Footer";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/rooms" element={ <Rooms /> } />
         <Route path="/contact" element={ <Contact /> } />
       </Routes>
+      <Footer />
     </BrowserRouter>
     
   );
