@@ -1,5 +1,8 @@
 
 import "./pages.css"
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
+// import { faStar } from '@fortawesome/free-regular-svg-icons'
 import home_image1 from "../assets/images/home/room1.jpeg"
 import outlook1 from "../assets/images/home/outlook1.jpg"
 import room4 from "../assets/images/home/room4.jpg"
@@ -21,7 +24,12 @@ export default function Home(){
                     <p className="text-1">The Best Royal Luxury Hotel</p>
                     <p className="text-2">With Our Proffessional Service</p>
                     <p className="text-3">LUXURY & COMFORT</p>
-                    <p>4 star</p>
+                    <p>
+                        <FontAwesomeIcon icon={faStar} className="star-icon"/>
+                        <FontAwesomeIcon icon={faStar} className="star-icon"/>
+                        <FontAwesomeIcon icon={faStar} className="star-icon"/>
+                        <FontAwesomeIcon icon={faStar} className="star-icon"/>
+                    </p>
                     <p>Contact: 044-45674567</p>
                 </div>
                 <div className="home-image">
@@ -31,7 +39,12 @@ export default function Home(){
                     <p className="text-1">The Best Royal Luxury Hotel</p>
                     <p className="text-2">With Our Proffessional Service</p>
                     <p className="text-3">LUXURY & COMFORT</p>
-                    <p>4 star</p>
+                    <p>
+                        <FontAwesomeIcon icon={faStar} className="star-icon"/>
+                        <FontAwesomeIcon icon={faStar} className="star-icon"/>
+                        <FontAwesomeIcon icon={faStar} className="star-icon"/>
+                        <FontAwesomeIcon icon={faStar} className="star-icon"/>
+                    </p>
                     <p>Contact: 044-45674567</p>
                 </div>
             </div>

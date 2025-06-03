@@ -1,5 +1,7 @@
 import React from 'react'
 import "./pages.css"
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 export default function RoomCard(props) {
   return (
@@ -13,7 +15,7 @@ export default function RoomCard(props) {
       <div className='room-details'>
         <p className='room-name'>{props.name}</p>
         <p className='room-address'>{props.address}</p>
-        <p className="room-rating">{props.rating} star</p>
+        <p className="room-rating">{props.rating}<FontAwesomeIcon icon={faStar} className="star-icon-room"/></p>
         <ul className="amenities">
             <li>AC</li>
             <li>Free Wifi</li>

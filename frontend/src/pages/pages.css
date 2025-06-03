@@ -38,6 +38,11 @@
     color: #520847;
 }
 
+.star-icon{
+    color: goldenrod;
+    font-size: 13px;
+}
+
 .home-image{
     width: 50%;
     height: 280px;
