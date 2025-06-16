@@ -344,7 +344,21 @@
 /* ----------------------Sign Up----------------------------------- */
 
 .sign-up{
+    width: 330px;
+    align-items: center;
+    margin: auto;
     margin-top: 60px;
+}
+
+.gender-option{
+    display: flex;
+    align-items: center;
+}
+
+.gender-category{
+    font-size: 11px;
+    margin-top: 15px;
+    margin-right: 10px;
 }
 
 @media screen and (max-width: 700px){
