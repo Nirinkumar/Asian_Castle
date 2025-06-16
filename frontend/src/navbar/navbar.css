@@ -58,7 +58,7 @@
     background-color: #053b33;
     position: absolute;
     top: 0;
-    right: 0;
+    right: -160px;
 }
 
 .side-close{

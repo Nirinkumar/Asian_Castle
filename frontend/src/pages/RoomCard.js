@@ -1,7 +1,7 @@
 import React from 'react'
 import "./pages.css"
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { faCarBattery, faSatelliteDish, faSnowflake, faStar, faTv, faWifi } from '@fortawesome/free-solid-svg-icons'
 
 export default function RoomCard(props) {
   return (
@@ -17,11 +17,11 @@ export default function RoomCard(props) {
         <p className='room-address'>{props.address}</p>
         <p className="room-rating">{props.rating}<FontAwesomeIcon icon={faStar} className="star-icon-room"/></p>
         <ul className="amenities">
-            <li>AC</li>
-            <li>Free Wifi</li>
-            <li>TV</li>
-            <li>DTH</li>
-            <li>Power Backup</li>
+            <li><FontAwesomeIcon icon={faSnowflake} /> AC</li>
+            <li><FontAwesomeIcon icon={faWifi} /> Free Wifi</li>
+            <li><FontAwesomeIcon icon={faTv} /> TV</li>
+            <li><FontAwesomeIcon icon={faSatelliteDish} /> DTH</li>
+            <li><FontAwesomeIcon icon={faCarBattery} /> Power Backup</li>
         </ul>
         <p className='room-price'>Price: ₹{props.price}/- ({props.offer})</p>
         <p className="add-info">{props.addInfo}</p>
