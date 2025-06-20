@@ -3,7 +3,7 @@ import "./pages.css"
 
 export default function SignUp() {
 
-    const [gender, setGender] = useState("male")
+    const [gender, setGender] = useState();
 
     function handleGender(value){
         setGender(value);
@@ -14,11 +14,11 @@ export default function SignUp() {
             <h2>Sign Up</h2>
             <form className="login-form">
                 <label>Name</label>
-                <input type='text' name='name' placeholder='Enter your name' />
+                <input type='text' name='name' placeholder='Enter your name' required />
                 <label>Age</label>
-                <input type='number' name='age' placeholder='Enter your age' />
+                <input type='number' name='age' placeholder='Enter your age' required />
                 <label>Address</label>
-                <input type='text' name='address' placeholder='Enter your Full address' />
+                <input type='text' name='address' placeholder='Enter your Full address' required />
                 <label>Gender</label>
                     <div className='gender-option'>
                         <input type='radio' id='male' name='gender' value="male" 
@@ -39,14 +39,19 @@ export default function SignUp() {
                         }}/>
                         <p htmlFor="others" className='gender-category'>Others</p>
                     </div>
-                    
+                <label>Mobile No</label>
+                <input type="number" name="mobileNo" placeholder="Enter your mobile no" required />    
                 <label>Email</label>
-                <input type="email" name="email" placeholder="Enter your email" />
+                <input type="email" name="email" placeholder="Enter your email" required />
                 <label>Password</label>
-                <input type="password" name="password" placeholder="Enter your password" />
+                <input type="password" name="password" placeholder="Enter your password" required />
                 <label>Confirm Password</label>
-                <input type="password" name="password" placeholder="Enter your password" />
-                <button>Register</button>
+                <input type="password" name="password" placeholder="Enter your password" required />
+                <div className='signup-btns'>
+                    <button className='register-btn'>Register</button>
+                    <button to="/" className='register-btn'>Cancel</button>
+                </div>
+                
             </form>                
         </div>
     </div>

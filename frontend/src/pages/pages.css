@@ -92,12 +92,38 @@
     height: 200px;
     padding-bottom: 5px;
 }
+/* ----------------------Footer------------------------------- */
 
 .footer{
-    /* background-color: #077c68; */
     background-color: #0d6d5f;
-    height: 100px;
     margin-top: 20px;
+    padding: 20px;
+}
+.footer-name{
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+}
+.social-links{
+    font-weight: 600;
+}
+.social-icons{
+    display: flex;
+    gap: 10px;
+    margin-top: -20px;
+}
+.social-icons p{
+    color: #ffffff;
+    font-size: 10px;
+    background-color: #000000;
+    padding: 3px 5px;
+    border-radius: 50%;
+}
+.social-icons p:hover{
+    color: #ed165e;
+}
+.copy-rights{
+    font-size: 10px;
 }
 
 /* ---------------Login Page------------------------ */
@@ -344,10 +370,14 @@
 /* ----------------------Sign Up----------------------------------- */
 
 .sign-up{
-    width: 330px;
+    width: 350px;
     align-items: center;
     margin: auto;
     margin-top: 60px;
+}
+
+.login-container h2{
+    text-align: center;
 }
 
 .gender-option{
@@ -359,6 +389,24 @@
     font-size: 11px;
     margin-top: 15px;
     margin-right: 10px;
+}
+
+.signup-btns{
+    margin: auto;
+}
+
+.register-btn{
+    /* margin: 10px; */
+    margin-top: 10px;
+    margin-right: 15px;
+    font-size: 12px;
+    padding: 5px 10px;
+    background-color: #0d6d5f;
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    border-radius: 3px;
 }
 
 @media screen and (max-width: 700px){
