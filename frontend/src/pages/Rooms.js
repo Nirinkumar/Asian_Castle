@@ -15,7 +15,7 @@ export default function Rooms(){
             name={room.name}
             image={room.image}
             address={room.address}
-            ratings={room.rating}
+            rating={room.rating}
             place={room.place}
             ac={room.ac}
             wifi={room.wifi}
