@@ -4,8 +4,6 @@ import "./pages.css"
 
 export default function SignUp() {
 
-    const [gender, setGender] = useState();
-
     const[user, setUser] = useState({
         name : "",
         age : "",
@@ -21,6 +19,8 @@ export default function SignUp() {
 
     const onInputChange = (e)=>{
         setUser({...user,[e.target.name]:e.target.value})
+        console.log(user);
+        
     }
 
     const handleSubmit =async (e)=>{
@@ -28,9 +28,6 @@ export default function SignUp() {
         await axios.post("http://localhost:8080/user/register",user)
     }
 
-    // function handleGender(value){
-    //     setGender(value);
-    // }
   return (
     <div className='sign-up'>
         <div className="login-container">
@@ -42,56 +39,36 @@ export default function SignUp() {
                 <input type='number' name='age' value={age} placeholder='Enter your age' onChange={(e)=>onInputChange(e)} required />
                 <label>Address</label>
                 <input type='text' name='address' value={address} placeholder='Enter your Full address' onChange={(e)=>onInputChange(e)} required />
-              
-                {/* <select name="gender" onChange={(e)=>onInputChange(e)} required>
-                    <option value="">Select Gender</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                </select><br /> */}
 
                 <div>
                     <label>Gender</label>
                     <div className='gender-option'>
-                                           
                         <input 
                             type="radio"
                             name="gender"
                             value="male"
-                            checked={user.gender === 'Male'} 
+                            checked={user.gender === 'male'} 
                             onChange={(e)=>onInputChange(e)}
                         />
                         <p htmlFor="male" className='gender-category'>Male</p>
-                                          
+
                         <input 
                             type="radio"
                             name="gender"
                             value="female"
-                            checked={user.gender === 'Female'} 
+                            checked={user.gender === 'female'} 
                             onChange={(e)=>onInputChange(e)}
                         />
                         <p htmlFor="female" className='gender-category'>Female</p>
-                                       
+
                         <input 
                             type="radio"
                             name="gender"
                             value="others"
-                            checked={user.gender === 'Others'} 
+                            checked={user.gender === 'others'} 
                             onChange={(e)=>onInputChange(e)}
                         />
                         <p htmlFor="others" className='gender-category'>Others</p>
-                        
-
-                        {/* <input type='radio' id='female' name='gender' value="female" 
-                        onChange={()=>{
-                            handleGender("female")
-                        }}/>
-                        <p htmlFor="female" className='gender-category'>Female</p>
-
-                        <input type='radio' id='others' name='gender' value="others"
-                        onChange={()=>{
-                            handleGender("others")
-                        }}/>
-                        <p htmlFor="others" className='gender-category'>Others</p> */}
                     </div>
                 </div>
                 <label>Mobile No</label>
