@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
+import { useNavigate } from "react-router-dom"
 import axios from "axios"
 import "./pages.css"
 
 export default function SignUp() {
+
+    let navigate = useNavigate();
 
     const[user, setUser] = useState({
         name : "",
@@ -18,14 +21,14 @@ export default function SignUp() {
     const{name, age, address, mobileNo, email, username, password} = user
 
     const onInputChange = (e)=>{
-        setUser({...user,[e.target.name]:e.target.value})
-        console.log(user);
-        
+        setUser({...user,[e.target.name]:e.target.value})        
     }
 
     const handleSubmit =async (e)=>{
         e.preventDefault();
         await axios.post("http://localhost:8080/user/register",user)
+        alert("Registered Successfully!!!");
+        navigate("/");
     }
 
   return (
